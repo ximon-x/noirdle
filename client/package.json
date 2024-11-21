@@ -13,6 +13,7 @@
     "@noir-lang/backend_barretenberg": "^0.31.0",
     "@noir-lang/noir_js": "^0.31.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.17",
