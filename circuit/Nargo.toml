@@ -1,0 +1,7 @@
+[package]
+name = "circuit"
+type = "bin"
+authors = ["Group 6 Team members for the ZK Bootcamp"]
+compiler_version = ">=0.36.0"
+
+[dependencies]
