@@ -6,13 +6,8 @@ struct LetterStatus {
     is_present: bool,
 }
 
-// Main Wordle circuit to verify a valid guess
-fn main(
-    // target_word: [Field; WORD_LENGTH],
-    // guess: pub [Field; WORD_LENGTH],
-    target_word: str<WORD_LENGTH>,
-    guess: str<WORD_LENGTH>,
-) -> pub [LetterStatus; WORD_LENGTH] {
+// Main Noirdle circuit to verify a valid guess
+fn main(target_word: str<WORD_LENGTH>, guess: str<WORD_LENGTH>) -> pub [LetterStatus; WORD_LENGTH] {
     // Shadowing target_word and guess
     let target_word = target_word.as_bytes();
     let guess = guess.as_bytes();
