@@ -44,7 +44,7 @@ export function Game() {
             description: "Please wait...",
             variant: "default",
           });
-          
+
           const { witness } = await noir.execute(input);
           const proof = await backend.generateProof(witness);
 
@@ -56,7 +56,7 @@ export function Game() {
 
           toast({
             title: "Proof generated",
-            description: proof.proof,
+            description: "🎉",
             variant: "default",
           });
           console.log("input", proof.proof);
@@ -65,7 +65,7 @@ export function Game() {
           if (isValid) {
             toast({
               title: "Proof is valid",
-              description: "🎉",
+              description: proof.proof,
               variant: "default",
             });
             return;

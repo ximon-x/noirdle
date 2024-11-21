@@ -14,8 +14,13 @@ const wasmContentTypePlugin = {
         res.setHeader("Content-Type", "application/wasm");
         const newPath = req.url.replace("deps", "dist");
         const targetPath = path.join(__dirname, newPath);
-        const wasmContent = fs.readFileSync(targetPath);
-        return res.end(wasmContent);
+        try {
+          const wasmContent = fs.readFileSync(targetPath);
+          return res.end(wasmContent);
+        } catch (error) {
+          console.error(`Failed to load WASM file: ${targetPath}`, error);
+          next(error);
+        }
       }
       next();
     });
@@ -35,6 +40,7 @@ export default defineConfig(({ command }) => {
         esbuildOptions: {
           target: "esnext",
         },
+        exclude: ["@noir-lang/backend_barretenberg", "@noir-lang/noir_js"]
       },
       plugins: [
         react(),
