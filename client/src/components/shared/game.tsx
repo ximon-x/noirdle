@@ -44,7 +44,7 @@ export function Game() {
             description: "Please wait...",
             variant: "default",
           });
-
+          
           const { witness } = await noir.execute(input);
           const proof = await backend.generateProof(witness);
 
@@ -59,6 +59,7 @@ export function Game() {
             description: proof.proof,
             variant: "default",
           });
+          console.log("input", proof.proof);
 
           const isValid = await backend.verifyProof(proof);
           if (isValid) {

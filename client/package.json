@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@noir-lang/backend_barretenberg": "^0.31.0",
-    "@noir-lang/noir_js": "^0.31.0",
+    "@noir-lang/backend_barretenberg": "^0.36.0",
+    "@noir-lang/noir_js": "^0.36.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-toast": "^1.2.2",
     "class-variance-authority": "^0.7.0",
